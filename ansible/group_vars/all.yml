@@ -1,0 +1,20 @@
+---
+deploy_user: deploy
+
+app_name: demo-app
+app_dir: /opt/demo-app
+app_repo: https://github.com/example/example-app.git
+app_version: main
+app_exec_start: /usr/bin/docker-compose up -d
+app_exec_stop: /usr/bin/docker-compose down
+app_service_type: oneshot
+app_service_remain_after_exit: true
+app_service_restart: "no"
+app_service_user: root
+app_service_group: root
+app_env: {}
+app_port: 8080
+
+domain_name: example.com
+letsencrypt_email: admin@example.com
+ssl_mode: selfsigned # allowed: selfsigned | letsencrypt

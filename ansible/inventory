@@ -1,0 +1,12 @@
+[web]
+app1 ansible_host=192.168.64.2 ansible_user=debian ansible_password=debian ansible_become_password=debian app_repo=https://github.com/spaceman5789/Nginx--SQL-Grafana-Prom app_exec_start="/usr/bin/docker-compose up -d" app_exec_stop="/usr/bin/docker-compose down" app_port=8080
+
+[web:vars]
+# Override variables from site.yml if needed
+# domain_name=example.com
+# ssl_mode=letsencrypt
+# letsencrypt_email=admin@example.com
+app_repo=https://github.com/spaceman5789/Nginx--SQL-Grafana-Prom
+app_exec_start=/usr/bin/docker-compose up -d
+app_exec_stop=/usr/bin/docker-compose down
+app_port=8080
