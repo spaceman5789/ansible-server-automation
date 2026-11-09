@@ -1,3 +1,5 @@
 ansible/inventory
 *.retry
 .DS_Store
+.claude/
+CLAUDE.md
